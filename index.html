@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Web Canvas</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+</html>
+
+<body onload="init()">
+    <div class="row">
+
+        <label class="upload">
+            <input type="file" id="imageLoader" name="imageLoader" /><img src="icons/upload.png">
+        </label>
+        <a href="#" class="button" id="download_btn" download="index.png" type="file"><img src="icons/download.png"></a>
+        <button class="button" type="button" onclick="Undo()"><img src="icons/undo.png"></button>
+        <button class="button" type="button" onclick="Redo()"><img src="icons/redo.png"></button>
+        <button class="button" type="button" onclick="clr()"><img src="icons/reset.png"></button>
+    </div>
+    <canvas id="canvas" width="1050px" height="600px"></canvas>
+    <div class="paint">
+        <div class="style">
+            <div><input type="color" id="palette"></div>
+            <div><input type="range" min="4" max="48" value="8" id="line_Width"></div>
+            <!--
+                <select id="line_Width">
+                    <option value=8>8</option>
+                    <option value=12>12</option>
+                    <option value=16>16</option>
+                    <option value=24>24</option>
+                </select>
+            -->
+
+
+        </div>
+
+
+        <button class="selected" type="button" id="brush" onclick="ChangeTool('brush')"><img src="icons/brush.png"></button>
+        <button class="button" type="button" id="eraser" onclick="ChangeTool('eraser')"><img src="icons/eraser.png"></button>
+        <button class="button" type="button" id="line" onclick="ChangeTool('line')"><img src="icons/line.png"></button>
+        <button class="button" type="button" id="circle" onclick="ChangeTool('circle')"><img src="icons/circle.png"></button>
+        <button class="button" type="button" id="triangle" onclick="ChangeTool('triangle')"><img
+                src="icons/triangle.png"></button>
+        <button class="button" type="button" id="rectangle" onclick="ChangeTool('rectangle')"><img
+                src="icons/rectangle.png"></button>
+        <button class="button" type="button" id="text" onclick="ChangeTool('text')"><img src="icons/text.png"></button>
+
+        <div class="fontStyle">
+            <div>
+                <select id="font_size">
+                    　<option value="24">24</option>
+                    　<option value="36">36</option>
+                    　<option value="48">48</option>
+                    　<option value="72">72</option>
+                </select>
+            </div>
+            <div>
+                <select id="font_style">
+                    　<option value="serif" style="font-family: serif;">serif</option>
+                    　<option value="cursive" style="font-family: cursive;">cursive</option>
+                    　<option value="fantasy" style="font-family: fantasy;">fantasy</option>
+                    　<option value="monospace" style="font-family: monospace;">monospace</option>
+                </select>
+            </div>
+            
+
+        </div>
+
+        <!--
+            <input type="text" id="myText" value="">
+        -->
+
+    </div>
+
+
+</body>
+<script src="index.js"></script>

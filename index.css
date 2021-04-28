@@ -1,0 +1,218 @@
+canvas {
+    border:1px solid black;
+    border-radius: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.row{
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+.upload {
+    width :28 px;
+    background-color:grey;
+    border: none;
+    color: white;
+    padding: 24px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Sans-serif;
+}
+
+.button {
+    width :28 px;
+    background-color:grey;
+    border: none;
+    color: white;
+    padding: 24px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Sans-serif;
+  }
+
+  #palette{
+    height:32px;
+    width:70px;
+    background-color:grey;
+    border: none;
+    padding: 12px 24px;
+    display: inline-block;
+    font-size: 28px;
+    margin: 4px 2px;
+
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Sans-serif;
+  }
+
+  .selected{
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 24px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Sans-serif;
+  }
+
+.Button:hover {
+    background-color:#1a205c;
+}
+.Button:active {
+    position:relative;
+    top:1px;
+}
+
+#line_Width{
+    
+    width:70px;
+    background-color:grey;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Sans-serif;
+}
+
+#font_style{
+    height:32px;
+    widows: 140px;
+    background-color:grey;
+    border: none;
+    padding-left: 10px;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    color: white;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Sans-serif;
+
+
+
+}
+
+#font_size{
+    width:70px;
+    background-color:grey;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Sans-serif;
+}
+
+.paint{
+    display: flex;
+    justify-content: center;
+  align-items: center; 
+}
+
+
+.style{
+    display: flex;
+    flex-direction: column;
+}
+
+#myText{
+    border-radius: 12px;
+    font-family: Sans-serif;
+    font-size: 20px;
+    padding-left: 8px;
+    margin-top: 20px;
+    height:50px;
+}
+
+.fontStyle{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="range"]{
+    -webkit-appearance: none;
+    overflow:hidden;     /* 限定範圍 */
+    width:200px;
+    height:20px;
+    outline : none;      /* 避免點選會有藍線或虛線 */
+    background:none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    position: relative;    /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+    width:10px;
+    height:10px;
+    background:black;
+    border-radius:50%;
+    transition:.2s;        /* 點選放大時候的漸變時間 */
+  }
+
+  input[type="range"]::-webkit-slider-thumb:before,
+input[type="range"]::-webkit-slider-thumb:after
+{
+  position: absolute;
+  top: 3px;
+  width: 2000px;          /* 長度很長沒關係，因為剛剛有用 overflow:hidden 了 */
+  height: 4px;
+  content:"";
+  pointer-events: none;   /* 讓滑鼠可以點擊穿透偽元素，不然會點不到下面 */
+  transition:.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:before{
+  left: -1997px;
+  background: black;
+}
+input[type="range"]::-webkit-slider-thumb:after {
+  left: 10px;
+  background: #edc;
+}
+
+input[type="range"]:active::-webkit-slider-thumb:before,
+input[type="range"]:active::-webkit-slider-thumb:after
+{
+  top: 6px;
+}
+
+input[type="range"]:active::-webkit-slider-thumb{
+  width:16px;
+  height:16px;
+}
+
+input[type="range"]:active::-webkit-slider-thumb:after {
+  left: 16px;
+}
