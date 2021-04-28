@@ -69,5 +69,5 @@ Change Text Size and Font Style
 
 ### Gitlab page link
 
-    https://106010018.gitlab.io/AS_01_WebCanvas
+    [https://106010018.gitlab.io/AS_01_WebCanvas](https://106010018.gitlab.io/AS_01_WebCanvas)
 
