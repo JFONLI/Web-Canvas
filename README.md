@@ -71,8 +71,3 @@ Change Text Size and Font Style
 
     https://106010018.gitlab.io/AS_01_WebCanvas
 
-<style>
-table th{
-    width: 100%;
-}
-</style>
